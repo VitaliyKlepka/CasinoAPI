@@ -19,7 +19,7 @@ export class FinancialService {
     const finStats = await this.financialStatisticRepository.findOneBy({
       accountId,
     });
-    console.log('FIN_STATS', { finStats, accountId });
+
     if (!finStats) {
       return this.financialStatisticRepository.save({
         accountId,
